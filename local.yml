@@ -1,0 +1,9 @@
+---
+- hosts: localhost # pulling a repo down to run on a localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: install htop
+    package:
+      name: htop
