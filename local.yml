@@ -22,7 +22,7 @@
   - name: Clone the configs
     git:
       repo: git@github.com:Makcime/configs.git
-      dest: $HOME/
+      dest: {{ lookup( 'ansible.builtin.env', 'HOME')  }}
       key_file: ~.ssh/id_ed25519
       clone: yes
       update: yes
