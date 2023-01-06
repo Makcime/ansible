@@ -19,9 +19,9 @@
         - rclone
         - tree
 
-   - name: Clone the configs
-     git:
-       repo: https://github.com/Makcime/configs.git
-       dest: $HOME
-       clone: yes
-       update: yes
+  - name: Clone the configs
+    git:
+      repo: https://github.com/Makcime/configs.git
+      dest: $HOME
+      clone: yes
+      update: yes
