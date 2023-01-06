@@ -22,6 +22,7 @@
   - name: Clone the configs
     git:
       repo: git@github.com:Makcime/configs.git
-      dest: $HOME
+      dest: $HOME/
+      keyfile: ~.ssh/id_ed25519
       clone: yes
       update: yes
