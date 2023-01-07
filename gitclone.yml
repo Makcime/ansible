@@ -1,0 +1,16 @@
+- hosts: localhost # pulling a repo down to run on a localhost
+  connection: local
+  become: true
+  vars:
+    home: "/home/oscqr/"
+    # home: "{{ lookup( 'ansible.builtin.env', 'HOME')  }}"
+
+  tasks:
+  - name: Clone the configs
+    git:
+      repo: git@github.com:Makcime/configs.git
+      dest: "{{ home }}/configs/"
+      key_file: "{{ home }}/.ssh/id_ed25519"
+      clone: yes
+      update: yes
+
